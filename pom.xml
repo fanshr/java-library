@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.fanshr</groupId>
+    <artifactId>java-library</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>case95-rabbitmq</module>
+        <module>case94-httpclient</module>
+        <module>case93-log</module>
+        <module>case92-json</module>
+        <module>case91-xml</module>
+        <module>case90-excel</module>
+        <module>case89-job-quartz</module>
+        <module>case88-ftp</module>
+        <module>case87-dbcp</module>
+
+        <module>case90-excel-poi3</module>
+        <module>case90-excel-poi4</module>
+        <module>case90-excel-poi5</module>
+        <module>case86-test-junit3</module>
+        <module>case86-test-junit4</module>
+        <module>case86-test-junit5</module>
+        <module>case93-log-logging</module>
+        <module>case93-log-log4j</module>
+        <module>case93-log-logback</module>
+        <module>case93-log-slf4j</module>
+        <module>case95-mq-active</module>
+        <module>case95-mq-rocket</module>
+        <module>case95-mq-kafka</module>
+        <module>case85-cache-memcache</module>
+        <module>case85-cache-redis</module>
+        <module>case84-search-elastic</module>
+        <module>case88-file-ftp</module>
+        <module>case88-file-oss</module>
+        <module>case83-registry-zookeeper</module>
+        <module>case90-excel-easyexcel</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit.version>4.13.2</junit.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+
+
+            <!--rabbitmq 依赖客户端-->
+            <dependency>
+                <groupId>com.rabbitmq</groupId>
+                <artifactId>amqp-client</artifactId>
+                <version>5.14.2</version>
+            </dependency>
+            <!--操作文件流的一个依赖-->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.6</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.5.13</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-httpclient</groupId>
+                <artifactId>commons-httpclient</artifactId>
+                <version>3.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>4.9.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents.client5</groupId>
+                <artifactId>httpclient5</artifactId>
+                <version>5.1.3</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.5</version>
+            </dependency>
+
+
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.76</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.7.32</version>
+                <!--<scope>test</scope>-->
+            </dependency>
+
+
+
+
+
+
+
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>3.17</version>
+            </dependency>
+
+            <!--<dependency>-->
+            <!--    <groupId>org.apache.poi</groupId>-->
+            <!--    <artifactId>poi</artifactId>-->
+            <!--    <version>4.1.2</version>-->
+            <!--</dependency>-->
+
+            <!--<dependency>-->
+            <!--    <groupId>org.apache.poi</groupId>-->
+            <!--    <artifactId>poi</artifactId>-->
+            <!--    <version>5.2.2</version>-->
+            <!--</dependency>-->
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>3.0.5</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+</project>
